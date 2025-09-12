@@ -8,12 +8,12 @@
 - Klaar (herhaal vanaf stap 2 indien het niet werkt)
 ## Ontgrendelde items:
 - Achtergrond veranderen
-- Apps:
-  - [x] `protonvpn.exe`
-  - [x] `wireguard.exe`
-  - [x] `discord.exe`
-  - [x] `steam.exe`
-  - [x] `epicgameslauncher.exe`
+- Apps: <br>
+    ✅ `protonvpn.exe` <br>
+    ✅ `wireguard.exe` <br>
+    ✅ `discord.exe` <br>
+    ✅ `steam.exe` <br>
+    ✅ `epicgameslauncher.exe`
  
 -----------------------
 SCHOOL 0  - APPELMOES 1
