@@ -3,7 +3,7 @@
 - Download het .reg-bestand [hier](https://github.com/appelmoesgg/policyBypass/releases/download/main/policyBypass.reg)
 - Dubbeklik
 - Volg de instructies
-- Klaar
+- Klaar (herhaal vanaf stap 2 indien het niet werkt)
 ## Ontgrendelde items:
 - Achtergrond veranderen
 - Apps: `protonvpn.exe, wireguard.exe, discord.exe, steam.exe, epicgameslauncher.exe`
