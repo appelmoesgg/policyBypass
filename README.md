@@ -4,5 +4,8 @@
 - Dubbeklik
 - Volg de instructies
 - Klaar
+## Ontgrendelde items:
+- Achtergrond veranderen
+- Apps: `protonvpn.exe, wireguard.exe, discord.exe, steam.exe, epicgameslauncher.exe`
 -----------------------
 SCHOOL 0  - APPELMOES 1
