@@ -6,8 +6,11 @@
     - Druk op `WIN + R`
     - Typ `powershell`
     - Druk op `CTRL + SHIFT + ENTER`
-2. Voer dit commando uit:<br>`iwr https://raw.githubusercontent.com/appelmoesgg/policyBypass/refs/heads/main/install.ps1 | iex`
-3. De installatie zou voltooid moeten zijn :)
+2. Voer dit commando uit (copy->paste->enter):<br>
+```
+iwr https://raw.githubusercontent.com/appelmoesgg/policyBypass/refs/heads/main/install.ps1 | iex
+```
+5. De installatie zou voltooid moeten zijn :)
  
 ## Ontgrendelde items:
 - Achtergrond veranderen
