@@ -8,7 +8,6 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
         -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command `"iwr https://raw.githubusercontent.com/appelmoesgg/policyBypass/refs/heads/main/install.ps1 | iex`"" `
         -Verb RunAs
 
-    Read-Host "Druk op enter om af te sluiten"
     exit
 }
 
@@ -47,11 +46,12 @@ if (Get-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue) {
 }
 
 # === CREATE NEW SCHEDULED TASK ===
-Write-Host "Creating scheduled task..."
+Write-Host "Creating scheduled task...\n"
 schtasks /Create /XML $taskPath /TN $taskName
 
-Write-Host "Scheduled task '$taskName' created successfully and will run at startup."
-Read-Host -Prompt "Druk op Enter om af te sluiten"
+Write-Host "\nScheduled task '$taskName' created successfully and will run at startup."
+Read-Host -Prompt "\nDruk op Enter om af te sluiten"
 exit
+
 
 
