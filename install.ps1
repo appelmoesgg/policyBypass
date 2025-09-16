@@ -1,13 +1,14 @@
 # === CHECK FOR ADMIN PRIVILEGES ===
 if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole(`
-        [Security.Principal.WindowsBuiltInRole] "Administrator")) {
+    [Security.Principal.WindowsBuiltInRole] "Administrator")) {
 
-    Write-Host "UAC is required. Restarting as administrator..."
+    Write-Host "This script requires Administrator privileges. Restarting as Administrator..."
 
     Start-Process -FilePath "powershell.exe" `
-        -ArgumentList "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" `
+        -ArgumentList "-NoProfile -ExecutionPolicy Bypass -Command `"iwr https://raw.githubusercontent.com/appelmoesgg/policyBypass/refs/heads/main/install.ps1 | iex`"" `
         -Verb RunAs
 
+    Read-Host "Druk op enter om af te sluiten"
     exit
 }
 
@@ -52,4 +53,5 @@ schtasks /Create /XML $taskPath /TN $taskName
 Write-Host "Scheduled task '$taskName' created successfully and will run at startup."
 Read-Host -Prompt "Druk op Enter om af te sluiten"
 exit
+
 
