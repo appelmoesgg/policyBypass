@@ -5,7 +5,7 @@
 1. Open Powershell als administrator:
     - Druk op `WIN + R`
     - Typ `powershell`
-    - Druk op `CTRL + SHIFT + ENTER`
+    - Druk op ok
 2. Voer dit commando uit (copy->paste->enter):<br>
 ```
 iwr https://raw.githubusercontent.com/appelmoesgg/policyBypass/refs/heads/main/install.ps1 | iex
