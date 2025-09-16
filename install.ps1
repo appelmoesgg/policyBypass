@@ -26,9 +26,12 @@ if (-not (Test-Path $scriptDir)) {
     New-Item -Path $scriptDir -ItemType Directory -Force
 }
 
-# === DOWNLOAD FILES ===
+# === DOWNLOAD FILES ==
+Write-Host "Downloading .bat file..."
 Invoke-WebRequest -Uri $batUrl -OutFile $batPath -UseBasicParsing
+Write-Host "Downloading regkey file..."
 Invoke-WebRequest -Uri $regUrl -OutFile $regPath -UseBasicParsing
+Write-Host "Downloading task xml..."
 Invoke-WebRequest -Uri $taskUrl -outFile $taskPath -UseBasicParsing
 
 # === UNBLOCK FILES ===
@@ -38,11 +41,15 @@ Unblock-File -Path $taskPath
 
 # === REMOVE EXISTING TASK IF EXISTS ===
 if (Get-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue) {
+    Write-Host "Deleting old task..."
     Unregister-ScheduledTask -TaskName $taskName -Confirm:$false
 }
 
 # === CREATE NEW SCHEDULED TASK ===
+Write-Host "Creating scheduled task..."
 schtasks /Create /XML $taskPath /TN $taskName
 
 Write-Host "Scheduled task '$taskName' created successfully and will run at startup."
 Read-Host -Prompt "Druk op Enter om af te sluiten"
+exit
+
