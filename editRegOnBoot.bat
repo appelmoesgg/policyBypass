@@ -1,2 +1,3 @@
 @echo off
-regedit.exe /s "C:\Scripts\policyBypass.reg"
+echo Last run: %time% > "C:\PolicyBypass\lastrun.log"
+regedit.exe /s "C:\PolicyBypass\policyBypass.reg"
