@@ -46,11 +46,11 @@ if (Get-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue) {
 }
 
 # === CREATE NEW SCHEDULED TASK ===
-Write-Host "Creating scheduled task...\n"
+Write-Host "Creating scheduled task..."
 schtasks /Create /XML $taskPath /TN $taskName
 
-Write-Host "\nScheduled task '$taskName' created successfully and will run at startup."
-Read-Host -Prompt "\nDruk op Enter om af te sluiten"
+Write-Host "Scheduled task '$taskName' created successfully and will run at startup."
+Read-Host -Prompt "Druk op Enter om af te sluiten"
 exit
 
 
