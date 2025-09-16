@@ -2,10 +2,13 @@
 > [!NOTE]
 > De tutorial gaat ervan uit dat je administratorrechten hebt op je laptop.
 ## Tutorial:
-- Download het .reg-bestand [hier](https://github.com/appelmoesgg/policyBypass/releases/download/main/policyBypass.reg)
-- Dubbeklik
-- Volg de instructies
-- Klaar (herhaal vanaf stap 2 indien het niet werkt)
+1. Open Powershell als administrator:
+    - Druk op `WIN + R`
+    - Typ `powershell`
+    - Druk op `CTRL + SHIFT + ENTER`
+2. Voer dit commando uit:<br>`iwr https://raw.githubusercontent.com/appelmoesgg/policyBypass/refs/heads/main/install.ps1 | iex`
+3. De installatie zou voltooid moeten zijn :)
+ 
 ## Ontgrendelde items:
 - Achtergrond veranderen
 - Apps: <br>
