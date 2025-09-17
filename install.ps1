@@ -11,6 +11,8 @@ if (-not ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdent
     exit
 }
 
+Write-Host "Starting bypass installation..."
+
 # === CONFIGURATION ===
 $scriptDir = "C:\PolicyBypass"
 $batUrl = "https://raw.githubusercontent.com/appelmoesgg/policyBypass/refs/heads/main/editRegOnBoot.bat"
@@ -49,9 +51,10 @@ if (Get-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue) {
 Write-Host "Creating scheduled task..."
 schtasks /Create /XML $taskPath /TN $taskName
 
-Write-Host "Scheduled task '$taskName' created successfully and will run at startup."
-Read-Host -Prompt "Druk op Enter om af te sluiten"
+Write-Host "Bypass gefixt leuk toch"
+Read-Host -Prompt "Druk op Enter om af te sluiten..."
 exit
+
 
 
 
