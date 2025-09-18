@@ -48,8 +48,8 @@ if (Get-ScheduledTask -TaskName $taskName -ErrorAction SilentlyContinue) {
 }
 
 # === ENCODING ===
-$xmlContent = Get-Content $taskPath -Encoding Unicode
-$xmlContent | Set-Content -Path $taskPath -Encoding Unicode
+#$xmlContent = Get-Content $taskPath -Encoding Unicode
+#$xmlContent | Set-Content -Path $taskPath -Encoding Unicode
 
 # === CREATE NEW SCHEDULED TASK ===
 Write-Host "Creating scheduled task..."
@@ -58,6 +58,7 @@ schtasks /Create /XML $taskPath /TN $taskName
 Write-Host "Bypass gefixt leuk toch"
 Read-Host -Prompt "Druk op Enter om af te sluiten..."
 exit
+
 
 
 
