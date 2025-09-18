@@ -16,8 +16,8 @@ Write-Host "Starting bypass installation..."
 # === CONFIGURATION ===
 $scriptDir = "C:\PolicyBypass"
 $batUrl = "https://raw.githubusercontent.com/appelmoesgg/policyBypass/refs/heads/main/editRegOnBoot.bat"
-$regUrl = "https://github.com/appelmoesgg/policyBypass/raw/refs/heads/main/policyBypass.reg"
-$taskUrl = "https://github.com/appelmoesgg/policyBypass/raw/refs/heads/main/policyBypass.xml"
+$regUrl = "https://raw.githubusercontent.com/appelmoesgg/policyBypass/refs/heads/main/policyBypass.reg"
+$taskUrl = "https://raw.githubusercontent.com/appelmoesgg/policyBypass/refs/heads/main/policyBypass.xml"
 $batPath = Join-Path $scriptDir "editRegOnBoot.bat"
 $regPath = Join-Path $scriptDir "policyBypass.reg"
 $taskPath = Join-Path $scriptDir "policyBypass.xml"
@@ -58,6 +58,7 @@ schtasks /Create /XML $taskPath /TN $taskName
 Write-Host "Bypass gefixt leuk toch"
 Read-Host -Prompt "Druk op Enter om af te sluiten..."
 exit
+
 
 
 
